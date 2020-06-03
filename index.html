@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to use Vue just like jQuery</title>
+  <!-- dev -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <!-- prod -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+</head>
+
+<body>
+  <main>
+    <div id="part_1">
+      <div>
+        <h2>Input</h2>
+        <p>name: <input type="text" id="name" v-model="name"></p>
+        <p>age: <input type="number" name="age" v-model="age"></p>
+      </div>
+      <div>
+        <h2>Preview</h2>
+        <p>name: {{name}}</p>
+        <p>name: {{age}}</p>
+      </div>
+    </div>
+
+  </main>
+  <script>
+    var app = new Vue({
+      el: '#part_1',
+      data: {
+        name: 'TJ',
+        age: '28',
+      }
+    })
+  </script>
+
+  <style>
+    #part_1 {
+      display: flex;
+      justify-content: space-around;
+    }
+  </style>
+</body>
+
+</html>
